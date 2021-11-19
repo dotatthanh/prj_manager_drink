@@ -129,7 +129,7 @@ class TypeController extends Controller
         try {
             DB::beginTransaction();
 
-            if ($type->medicines->count() > 0) {
+            if ($type->drinks->count() > 0) {
                 return redirect()->back()->with('alert-error','Xóa loại đồ uống thất bại! Loại đồ uống '.$type->name.' đang có đồ uống.');
             }
 
